@@ -1,5 +1,5 @@
 import React, { useState, Suspense } from 'react';
-const Articles = React.lazy(() => import('./components/Articles'));
+import Articles from './components/Articles';
 
 function App() {
   const [articlesVisible, setArticlesVisible] = useState(false);
@@ -7,9 +7,7 @@ function App() {
   return (
     <React.Fragment>
       {articlesVisible ? (
-        <Suspense fallback={<div>Loading...</div>}>
-          <Articles />
-        </Suspense>
+        <Articles />
       ) : (
         <button onClick={() => setArticlesVisible(true)}>Show articles</button>
       )}
