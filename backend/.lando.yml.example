@@ -1,0 +1,10 @@
+name: react-lazy-suspense-with-drupal
+recipe: drupal8
+config:
+  via: nginx
+  webroot: web
+  xdebug: true
+tooling:
+  drush:
+    service: appserver
+    cmd: drush --root=/app/web
