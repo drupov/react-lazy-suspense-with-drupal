@@ -10,7 +10,6 @@ Run in `/backend`:
 
 ```bash
 composer install
-composer drupal-scaffold
 ```
 
 Install your site. Generate some article content with Devel generate.
